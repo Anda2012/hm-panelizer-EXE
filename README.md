@@ -4,6 +4,8 @@
 
 # hm-panelizer (Portable Edition)
 
+![App Screenshot](hm-panelizer.png)
+
 [![License: MIT](https://shields.io)](https://opensource.org)
 [![Platform: Windows](https://shields.io)](https://github.com)
 
