@@ -25,6 +25,7 @@ import os.path
 import tempfile
 import subprocess
 import webbrowser
+import os
 import sys
 
 from os import listdir
@@ -32,6 +33,7 @@ from os.path import dirname
 
 from kivy import Config
 from kivy.uix.filechooser import FileChooserIconView
+from kivy.resources import resource_add_path
 
 from PcbMouseBites import *
 from PcbRail import *
@@ -39,8 +41,8 @@ from PcbExport import *
 
 Config.set('kivy', 'keyboard_mode', 'system')
 
-Config.set('graphics', 'width', '1600')
-Config.set('graphics', 'height', '960')
+Config.set('graphics', 'width', '1280')
+Config.set('graphics', 'height', '720')
 Config.set('graphics', 'minimum_width', '1024')
 Config.set('graphics', 'minimum_height', '670')
 
@@ -70,6 +72,7 @@ from PcbPanel import *
 from UI import *
 from PcbFile import *
 
+resource_add_path(sys._MEIPASS)
 
 class LoadDialog(FloatLayout):
     load = ObjectProperty(None)
@@ -698,4 +701,3 @@ if __name__ == '__main__':
     app = PanelizerApp()
     app.run()
     app.cleanup()
-
